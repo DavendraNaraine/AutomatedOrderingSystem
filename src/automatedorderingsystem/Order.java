@@ -5,6 +5,7 @@
  */
 package automatedorderingsystem;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,17 +13,18 @@ import java.util.Scanner;
  * @author Administrator
  */
 public class Order {
+
     protected int order_id;
     public int table_id;
-    public int[] quantity;
-    public String[] drink;
-    
+    public ArrayList<Integer> quantity = new ArrayList<>();
+    public ArrayList<String> drink = new ArrayList<>();
+
     //Constructor start
     public Order() {
         System.out.println("Order did construct");
     }
     //Constructor end
-    
+
     //Getter Setter start
     public int getOrder_id() {
         return order_id;
@@ -40,47 +42,54 @@ public class Order {
         this.table_id = table_id;
     }
 
-    public int[] getQuantity() {
+    public ArrayList<Integer> getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int[] quantity) {
+    public void setQuantity(ArrayList<Integer> quantity) {
         this.quantity = quantity;
     }
 
-    public String[] getDrink() {
+    public ArrayList<String> getDrink() {
         return drink;
     }
 
-    public void setDrink(String[] drink) {
+    public void setDrink(ArrayList<String> drink) {
         this.drink = drink;
     }
     //Getter Setter end
-    
+
     //Other functions
     public void takeOrder() {
-        int i = 0; 
-        
-        System.out.println("Would you like me to take your order? Yes or No");
-        
-        Scanner scanner = new Scanner(System.in);
-        String decision =  scanner.next();
-        
-        while("yes".equals(decision)) {
-            System.out.println("Choose a drink: Martini, Manhattan, Gin And Tonic");
-            
-            Scanner drinkScanner = new Scanner(System.in);
-            String drinkName = drinkScanner.next();
-            
-            if("Martini".equals(drinkName) || "Manhattan".equals(drinkName) || "Gin And Tonic".equals(drinkName)){
-                drink[i] = drinkName;
-                
-                Scanner quantityScanner = new Scanner(System.in);
-                int drinkQuantity = quantityScanner.nextInt();
-                quantity[i] = drinkQuantity;
-            } else {
-                System.out.println("Please choose from the list above");
+        Scanner decisionScanner = new Scanner(System.in);
+        Scanner drinkScanner = new Scanner(System.in);
+        Scanner quantityScanner = new Scanner(System.in);
+        String decision;
+        String drinkName;
+        int drinkQuantity;
+
+        do {
+            System.out.println("Would you like me to take your order? Yes or No");
+            decision = decisionScanner.next();
+
+            if ("yes".equals(decision)) {
+                System.out.println("Choose a drink: Martini, Manhattan, Gin");
+                drinkName = drinkScanner.next();
+
+                if ("Martini".equals(drinkName) || "Manhattan".equals(drinkName) || "Gin".equals(drinkName)) {
+                    drink.add(drinkName);
+
+                    System.out.println("How many " + drinkName + "s would you like?");
+                    drinkQuantity = quantityScanner.nextInt();
+                    quantity.add(drinkQuantity);
+                } 
+                else {
+                    System.out.println("Please choose from the list.");
+                }
+            } 
+            else {
+                System.out.println("Okay thank you.");
             }
-        }
+        } while (decision.equals("yes"));
     }
 }

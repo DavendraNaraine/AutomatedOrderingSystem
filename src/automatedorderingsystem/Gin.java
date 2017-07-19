@@ -9,11 +9,6 @@ package automatedorderingsystem;
  *
  * @author Administrator
  */
-public class GinAndTonic {
-    /*
-    Ingredients
-    2 oz. gin
-    4 oz. tonic
-    1 lime wedge
-    */
+public class Gin {
+    
 }
