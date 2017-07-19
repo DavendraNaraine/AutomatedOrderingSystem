@@ -16,5 +16,4 @@ public class Manhattan {
     1 oz. Carpano Antica sweet vermouth 
     2 dashes Angostura bitters
     */
-    
 }

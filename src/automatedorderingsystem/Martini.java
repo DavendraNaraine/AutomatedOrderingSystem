@@ -16,5 +16,4 @@ public class Martini {
     1/2 oz. dry vermouth
     Garnish with an olive
     */
-    
 }
