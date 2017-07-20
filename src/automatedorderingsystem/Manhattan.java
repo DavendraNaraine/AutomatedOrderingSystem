@@ -9,11 +9,17 @@ package automatedorderingsystem;
  *
  * @author Administrator
  */
-public class Manhattan {
-    /*
-    Ingredients
-    2 oz. bourbon or rye
-    1 oz. Carpano Antica sweet vermouth 
-    2 dashes Angostura bitters
-    */
+public class Manhattan extends Drink implements MakeDrink{
+    /*Ingredients: 2 oz. bourbon or rye, 1 oz. Carpano Antica sweet vermouth, 2 dashes Angostura bitters*/
+    
+    /**
+     *
+     * @param drinkName
+     * @param drinkQuantity
+     */
+
+    @Override
+    public void makeDrink(String drinkName, int drinkQuantity) {
+        
+    }
 }

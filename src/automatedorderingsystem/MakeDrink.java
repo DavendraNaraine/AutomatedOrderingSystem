@@ -4,18 +4,11 @@
  * and open the template in the editor.
  */
 package automatedorderingsystem;
-import java.util.ArrayList;
 
 /**
  *
  * @author Administrator
  */
 public interface MakeDrink {
-
-    /**
-     *
-     * @param drink
-     * @param quantity
-     */
-    public void makeDrink(ArrayList<String> drink, ArrayList<Integer> quantity);
+    public void makeDrink(String drinkName, int drinkQuantity);
 }

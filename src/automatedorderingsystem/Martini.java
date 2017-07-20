@@ -9,11 +9,17 @@ package automatedorderingsystem;
  *
  * @author Administrator
  */
-public class Martini {
-    /*
-    Ingredients
-    3 oz. gin or vodka
-    1/2 oz. dry vermouth
-    Garnish with an olive
-    */
+public class Martini extends Drink implements MakeDrink {
+    /*Ingredients: 3 oz. gin or vodka, 1/2 oz. dry vermouth, Garnish with an olive*/
+
+    /**
+     *
+     * @param drinkName
+     * @param drinkQuantity
+     */
+
+    @Override
+    public void makeDrink(String drinkName, int drinkQuantity) {
+        
+    }
 }
