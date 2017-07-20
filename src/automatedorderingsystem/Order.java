@@ -21,7 +21,9 @@ public class Order {
 
     //Constructor start
     public Order() {
-        System.out.println("Order did construct");
+        /*
+        *System.out.println("Order did construct");
+        */
     }
     //Constructor end
 
@@ -59,7 +61,7 @@ public class Order {
     }
     //Getter Setter end
 
-    //Other functions
+    //Other Functions
     public void takeOrder() {
         Scanner decisionScanner = new Scanner(System.in);
         Scanner drinkScanner = new Scanner(System.in);

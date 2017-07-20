@@ -4,16 +4,18 @@
  * and open the template in the editor.
  */
 package automatedorderingsystem;
+import java.util.ArrayList;
 
 /**
  *
  * @author Administrator
  */
-public class Gin {
-    /*
-    Ingredients
-    2 oz. gin
-    4 oz. tonic
-    1 lime wedge
-    */
+public interface MakeDrink {
+
+    /**
+     *
+     * @param drink
+     * @param quantity
+     */
+    public void makeDrink(ArrayList<String> drink, ArrayList<Integer> quantity);
 }
