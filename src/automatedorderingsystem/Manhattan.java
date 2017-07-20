@@ -22,4 +22,10 @@ public class Manhattan extends Drink implements MakeDrink{
     public void makeDrink(String drinkName, int drinkQuantity) {
         
     }
+
+    //Constructor start
+    public Manhattan() {
+        System.out.println("Manhattan did construct");
+    }
+    //Constructor end
 }

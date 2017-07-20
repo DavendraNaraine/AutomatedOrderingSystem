@@ -22,4 +22,10 @@ public class Martini extends Drink implements MakeDrink {
     public void makeDrink(String drinkName, int drinkQuantity) {
         
     }
+
+    //Constructor start
+    public Martini() {
+        System.out.println("Martini did construcr");
+    }
+    //Constructor end 
 }
