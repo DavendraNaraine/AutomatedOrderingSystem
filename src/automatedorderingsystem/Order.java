@@ -13,20 +13,20 @@ import java.util.Scanner;
  * @author Administrator
  */
 public class Order {
-
     protected int order_id;
     public int table_id;
     public ArrayList<Integer> quantity = new ArrayList<>();
     public ArrayList<String> drink = new ArrayList<>();
 
     //Constructor start
-    public Order() {
-        /*
-        *System.out.println("Order did construct");
-        */
+    public Order(int order_id, int table_id, ArrayList<Integer> quantity, ArrayList<String> drink) {
+        this.order_id = order_id;
+        this.table_id = table_id;
+        this.quantity = quantity;
+        this.drink = drink;
     }
     //Constructor end
-
+    
     //Getter Setter start
     public int getOrder_id() {
         return order_id;
@@ -62,7 +62,7 @@ public class Order {
     //Getter Setter end
 
     //Other Functions
-    public void takeOrder() {
+    public Order takeOrder() {
         Scanner decisionScanner = new Scanner(System.in);
         Scanner drinkScanner = new Scanner(System.in);
         Scanner quantityScanner = new Scanner(System.in);
@@ -93,5 +93,7 @@ public class Order {
                 System.out.println("Okay thank you.");
             }
         } while (decision.equals("yes"));
+        
+        return new Order(order_id, table_id, quantity, drink);
     }
 }

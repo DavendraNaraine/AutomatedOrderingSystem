@@ -25,7 +25,7 @@ public class Gin extends Drink implements MakeDrink{
 
     //Constructor start
     public Gin() {
-        System.out.println("");
+        System.out.println("Gin did construct");
     }
     //Constructor end 
 }

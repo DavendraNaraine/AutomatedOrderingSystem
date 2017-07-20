@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package automatedorderingsystem;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,8 +16,8 @@ public class AutomatedOrderingSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Order order = new Order();
-        order.takeOrder();
+        Order emptyOrder = new Order(1, 1, new ArrayList(), new ArrayList());
+        Order filledOrder = emptyOrder.takeOrder();
     }
     
 }
