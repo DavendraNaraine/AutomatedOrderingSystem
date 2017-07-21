@@ -24,8 +24,9 @@ public class Manhattan extends Drink implements MakeDrink{
     }
 
     //Constructor start
-    public Manhattan() {
-        System.out.println("Manhattan did construct");
+    public Manhattan(int drinkId, String drinkName, String[] ingredients) {
+        super(drinkId, drinkName, ingredients);
     }
     //Constructor end
+
 }

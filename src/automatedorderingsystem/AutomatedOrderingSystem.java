@@ -16,6 +16,7 @@ public class AutomatedOrderingSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Robot robot = new Robot(1);
         Order emptyOrder = new Order(1, 1, new ArrayList(), new ArrayList());
         Order filledOrder = emptyOrder.takeOrder();
     }

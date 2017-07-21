@@ -12,12 +12,13 @@ package automatedorderingsystem;
 public class Drink {
     protected int drinkId; 
     public String drinkName;
+    protected String[] ingredients;
 
     //Constructor start
-    public Drink() {
-        /*
-        *System.out.println("Drink did construct");
-        */
+    public Drink(int drinkId, String drinkName, String[] ingredients) {    
+        this.drinkId = drinkId;
+        this.drinkName = drinkName;
+        this.ingredients = ingredients;
     }
     //Constructor end
     
@@ -36,6 +37,14 @@ public class Drink {
 
     public void setDrinkName(String drinkName) {
         this.drinkName = drinkName;
+    }
+
+    public String[] getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
     }
     //Getter Setter end
 }

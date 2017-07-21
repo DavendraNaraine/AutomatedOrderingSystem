@@ -15,7 +15,7 @@ public class Robot {
     //Constructor start
     public Robot(int robot_id) {
         this.robot_id = robot_id;
-        System.out.println("Robot did construct");
+        System.out.println("Hi I am your Robot server");
     }
     //Constructor end
     
