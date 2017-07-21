@@ -38,7 +38,7 @@ public class AutomatedOrderingSystem {
             else {
                 System.out.println("Error in making drink.");
             } 
+            quantityC += 1;
         }
     }
-
 }
