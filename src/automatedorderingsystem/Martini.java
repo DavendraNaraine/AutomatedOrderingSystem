@@ -10,25 +10,26 @@ package automatedorderingsystem;
  * @author Administrator
  */
 public class Martini extends Drink implements MakeDrink {
-    /*Ingredients: 3 oz. gin or vodka, 1/2 oz. dry vermouth, Garnish with an olive*/
-
     /**
      *
      * @param drinkName
      * @param drinkQuantity
      */
-
     @Override
     public void makeDrink(String drinkName, int drinkQuantity) {
-        for(String ingredient : ingredients){
-            System.out.println("Mixing " + ingredient);
+        for (int i = 0; i  < drinkQuantity; i ++) {
+            for (String ingredient : ingredients) {
+                System.out.print("Mixing " + ingredient + " ");
+            }
+            System.out.println();
         }
+        System.out.println();
     }
 
     //Constructor start
     public Martini(int drinkId, String drinkName, String[] ingredients) {
         super(drinkId, drinkName, ingredients);
-        this.ingredients = new String[]{"3 oz. gin", "1/2 oz. dry vermouth", "Olive"};
+        this.ingredients = new String[]{"3 oz. rum", "1/2 oz. dry vermouth", "Olive"};
     }
     //Constructor end 
 }
