@@ -21,7 +21,7 @@ public class Manhattan extends Drink implements MakeDrink {
             for (String ingredient : ingredients) {
                 System.out.print("Blending " + ingredient + " ");
             }
-            System.out.println();
+            System.out.println("Here is your" + drinkName);
         }
        System.out.println();
     }
